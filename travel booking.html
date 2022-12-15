@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style type="text/css">
+        #parent{display: flex;}
+        #child1{flex: 1;
+                    border: 1px solid black;
+        }
+        #child2{flex: 2;
+                  border: 1px solid black;
+        }
+        button{width: 180px;
+             height: 130px;
+             background-color: aquamarine;
+             float: left;
+             margin: 20px;
+        }
+        form{margin: 80px;
+             }
+             label{margin-left: 30px;
+                   padding-left: 20px;
+            }
+            input{padding: 10px;}
+            h1{font-size: 40px;}
+    </style>
+</head>
+<body>
+    <section id="parent">
+        <section id="child1">
+            <form>
+                <h1>Booking Seat</h1>
+            <label>Name</label><br>
+            <input type="text" value=""><br>
+            <label>Gender</label><br>
+            <input type="text" value=""><br>
+            <label>Contact num</label><br>
+            <input type="text" value=""><br>
+            <label>pickup point</label><br>
+            <input type="text" value=""><br>
+            <label>end point</label><br>
+            <input type="text" value=""><br>
+        </form>
+        </section>
+        <section id="child2">
+         <button class="btn btn-outline-success" onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success" onclick="bocking(this)"></button>
+         <button  class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success" onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+         <button class="btn btn-outline-success"onclick="bocking(this)"></button>
+        </section>
+    </section>
+    <ul class="pagination">
+        <li class="page-item"><a href="travel2.html"class="page-link">1</a></li>
+        <li  class="page-item"><a href="travel3.html" class="page-link">2</a></li>
+        <li  class="page-item"><a href="travellogin.html" class="page-link">3</a></li>
+        <li  class="page-item"><a href="travel booking.html" class="page-link">4</a></li>
+    </ul>
+    <script type="text/javascript">
+        function bocking(bk){
+         var name=document.getElementsByTagName('input')[0].value;
+         var gender=document.getElementsByTagName('input')[1].value;
+         var num=document.getElementsByTagName('input')[2].value;
+         var pickpoint=document.getElementsByTagName('input')[3].value;
+         var endpoint=document.getElementsByTagName('input')[4].value;
+
+         bk.innerHTML=`
+         <ul>
+            <li>Name:${name}</li>
+            <li>Gender:${gender}</li>
+            <li>Num:${num}</li>
+            <li>pickpoint:${pickpoint}</li>
+             <li>endpoint:${endpoint}</li>
+             </ul>`   
+            bk.style.backgroundColor="blue";
+        }
+        
+    </script>
+</body>
+</html>
